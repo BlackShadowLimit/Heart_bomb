@@ -1,9 +1,9 @@
 # Heart_bomb
-##Function
+## Function
 It can make a heart shape and allow to bomb. Just like a heart when it moves.
-##Introduction
+## Introduction
 This program use math function to coculate the heart. So it will be easy to control the area of the heart.
-##Setting
+## Setting
 Before building it, here are some parameter control its speed, size or even the characters in the heart.
 
 ```
