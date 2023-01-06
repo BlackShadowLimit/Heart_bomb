@@ -68,6 +68,7 @@ void explosion(std::string ch) {
     for (float i = 0.2f; i < 1.5f; i += 0.1f) {
         outside(i, '*');
         printf("\x1b[H");
+        printf("\x1b[1;31m");
         for (int j = 0; j < width*height; j++) {
                 putchar(buffer[j]);
         }
@@ -77,7 +78,16 @@ void explosion(std::string ch) {
 }
 
 void text() {
+    for (int i = 0; i < width*height*2; i++) {
+        if (i % width == 0) buffer[i] = '\n';
+        else buffer[i] = ' ';
+    }
     printf("\x1b[H");
+    for (int i = 0; i < width*height*2; i++) {
+        putchar(buffer[i]);
+    }
+    printf("\x1b[H");
+    printf("\x1b[1;31m");
     printf("**********           *****       *****              **           **\n    **             ********** **********            **           **\n    **            ***********************           **           **\n    **            ***********************           **           **\n    **             *********************            **           **\n    **             *********************            **           **\n    **               *****************              **           **\n    **                ***************               **           **\n    **                  ***********                 **           **\n    **                    *******                    **         **\n***********                  *                         *********");
 }
 
@@ -93,6 +103,7 @@ int main (int argc, char** argv) {
         for (int i = 0; i < 13; i++) {
             if (c % 2 == 1) outside(o, '*');
             printf("\x1b[H");
+            printf("\x1b[1;31m");
             for (int j = 0; j < width*height; j++) {
                 putchar(buffer[j]);
             }
