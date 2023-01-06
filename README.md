@@ -14,3 +14,5 @@ speed: refers how fast the heart bomb
 k_max: the maxium size of the heart will be
 k_min: the minium size of the heart will be
 ```
+## Pakages
+Here we refer the sample of it. It provides exe file and dmg file. We allow those windows user and mac user can run this porgram.
